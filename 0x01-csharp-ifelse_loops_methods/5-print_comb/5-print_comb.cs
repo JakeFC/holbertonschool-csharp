@@ -10,9 +10,9 @@ namespace _5_print_comb
             string sep = ", ";
             for (i = 0; i < 99; i++)
             {
-                Console.Write("{0}{1}", i.ToString(), sep);
+                Console.Write("{0}{1}", i.ToString("D2"), sep);
             }
-            Console.WriteLine(i);
+            Console.WriteLine(i.ToString("D2"));
         }
     }
 }
