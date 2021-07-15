@@ -5,10 +5,10 @@ class Dictionary
 {
     public static string BestScore(Dictionary<string, int> myList)
     {
-        string best = null;
+        string best = "None";
         foreach (KeyValuePair<string, int> kvp in myList)
         {
-            if (best == null || myList[best] < kvp.Value)
+            if (best == "None" || myList[best] < kvp.Value)
                 best = kvp.Key;
         }
         return best;
