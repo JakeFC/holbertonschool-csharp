@@ -8,6 +8,8 @@ class LList
     {
         if (myLList.First == null)
             return 0;
-        return myLList.First.Value;
+        int value = myLList.First.Value;
+        myLList.Remove(value);
+        return value;
     }
 }
