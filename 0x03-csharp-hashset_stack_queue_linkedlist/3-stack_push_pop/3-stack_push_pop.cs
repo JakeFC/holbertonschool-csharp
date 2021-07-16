@@ -11,11 +11,15 @@ class MyStack
         Console.WriteLine("Number of items: {0}", aStack.Count);
         Console.WriteLine("Top item: {0}", aStack.Peek());
         bool contains = aStack.Contains(search);
+        bool stay = true;
         if (contains)
         {
-            while (aStack.Peek() != search)
+            while (stay)
+            {
+                if (aStack.Peek() == search)
+                    stay = false;
                 aStack.Pop();
-            aStack.Pop();
+            }
         }
         Console.WriteLine("Stack contains \"{0}\": {1}", search, contains);
         aStack.Push(newItem);
