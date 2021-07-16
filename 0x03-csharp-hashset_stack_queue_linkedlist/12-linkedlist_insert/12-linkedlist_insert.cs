@@ -7,13 +7,20 @@ class LList
     public static LinkedListNode<int> Insert(LinkedList<int> myLList, int n)
     {
         LinkedListNode<int> current = myLList.First;
+        if (current == null)
+        {
+            myLList.AddFirst(n);
+            return myLList.First;
+        }
+        LinkedListNode<int> previous = null;
         foreach (int x in myLList)
             {
                 if (n < x)
                     break;
+                previous = current;
                 current = current.Next;
             }
-        myLList.AddBefore(current, n);
+        myLList.AddAfter(previous, n);
         return myLList.Find(n);
     }
 }
