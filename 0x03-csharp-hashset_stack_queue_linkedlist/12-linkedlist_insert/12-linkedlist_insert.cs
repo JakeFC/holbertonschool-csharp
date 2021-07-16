@@ -8,14 +8,14 @@ class LList
     {
         LinkedListNode<int> current = myLList.First;
         foreach (int x in myLList)
+        {
+            if (n < x)
             {
-                if (n < x)
-                {
-                    myLList.AddBefore(current, n);
-                    return myLList.Find(n);
-                }
-                current = current.Next;
+                myLList.AddBefore(current, n);
+                return current.Previous;
             }
+            current = current.Next;
+        }
         myLList.AddLast(n);
         return myLList.Last;
     }
