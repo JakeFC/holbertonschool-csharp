@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using MyMath;
 
@@ -8,24 +9,27 @@ namespace MyMath.Tests
     {
         /// <summary>Tests Operations.Add() method with positive numbers.</summary>
         [Test]
-        public void AddingPositive()
+        public void AddPositive()
         {
-            int sum = Operations.Add(2, 4);
-            Assert.AreEqual(6, sum);
+            Assert.AreEqual(6, Operations.Add(2, 4));
         }
         /// <summary>Tests Operations.Add() method with negative numbers.</summary>
         [Test]
-        public void AddingNegative()
+        public void AddNegative()
         {
-            int sum = Operations.Add(-1, -3);
-            Assert.AreEqual(-4, sum);
+            Assert.AreEqual(-4, Operations.Add(-1, -3));
         }
         /// <summary>Tests Operations.Add() method with positive and negative numbers.</summary>
         [Test]
-        public void AddingPositiveAndNegative()
+        public void AddPositiveAndNegative()
         {
-            int sum = Operations.Add(-2, 7);
-            Assert.AreEqual(5, sum);
+            Assert.AreEqual(5, Operations.Add(-2, 7));
+        }
+        /// <summary>Tests Operations.Add() method with a positive number and zero.</summary>
+        [Test]
+        public void AddZero()
+        {
+            Assert.AreEqual(1, Operations.Add(0, 1));
         }
     }
 }
