@@ -12,7 +12,7 @@ namespace MyMath.Tests
         [Test]
         public void SimpleDivide()
         {
-            int [,] res = Matrix.Divide(MatrixTests.matrix, 2);
+            int [,] res = Matrix.Divide(matrix, 2);
             Assert.AreEqual(res, new int[2, 2]{{1, 2}, {3, 4}});
         }
         /// <summary>Tests division of a null matrix.</summary>
