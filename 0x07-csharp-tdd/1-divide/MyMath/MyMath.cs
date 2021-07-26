@@ -8,7 +8,7 @@ namespace MyMath
         /// <summary>Divides all elements of a matrix.</summary>
         /// <param name="matrix">2-D array to be divided.</param>
         /// <param name="num">Number by which to divide the matrix.</param>
-        /// <returns>A new matrix containing divided elements, or null if impossible.</param>
+        /// <returns>A new matrix containing divided elements, or null if impossible.</returns>
         public static int[,] Divide(int[,] matrix, int num)
         {
             if (matrix == null)
@@ -17,7 +17,7 @@ namespace MyMath
             }
             if (num == 0)
             {
-                Console.Error.WriteLine("Num cannot be 0");
+                Console.WriteLine("Num cannot be 0");
                 return null;
             }
             for (int y = 0; y < matrix.GetLength(0); y++)
