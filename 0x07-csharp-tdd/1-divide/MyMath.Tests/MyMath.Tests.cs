@@ -1,12 +1,11 @@
 using System;
 using NUnit.Framework;
-using MyMath;
 
 namespace MyMath.Tests
 {
     [TestFixture]
     /// <summary>Class containing all unittests for Matrix class methods.</summary>
-    public class MatrixTests
+    public class Tests
     {
         private static int[,] matrix = new int[2, 2]{{2, 4}, {6, 8}};
         /// <summary>Tests regular division.</summary>
