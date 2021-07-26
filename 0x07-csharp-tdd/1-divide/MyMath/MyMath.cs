@@ -17,7 +17,7 @@ namespace MyMath
             }
             if (num == 0)
             {
-                Console.WriteLine("Num cannot be 0");
+                Console.Error.WriteLine("Num cannot be 0");
                 return null;
             }
             for (int y = 0; y < matrix.GetLength(0); y++)

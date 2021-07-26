@@ -15,7 +15,7 @@ namespace MyMath.Tests
             int [,] res = Matrix.Divide(matrix, 2);
             Assert.AreEqual(res, new int[2, 2]{{1, 2}, {3, 4}});
         }
-        
+
         /// <summary>Tests division of a null matrix.</summary>
         [Test]
         public void NullMatrixDivision()
@@ -24,6 +24,20 @@ namespace MyMath.Tests
             Assert.AreEqual(res, null);
         }
 
+        /// <summary>Tests error message of dividing by zero.</summary>
+        [Test]
+        public void DivideByZeroError()
+        {
+            try
+            {
+                int [,] res = Matrix.Divide(matrix, 0);
+            }
+            catch(Exception e)
+            {
+                Assert.AreEqual(e, "Num cannot be 0");
+            }
+        }
+        
         /// <summary>Tests return value of dividing by zero.</summary>
         [Test]
         public void DivideByZeroReturn()
