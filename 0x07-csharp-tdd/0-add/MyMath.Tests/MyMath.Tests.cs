@@ -5,6 +5,7 @@ using MyMath;
 namespace MyMath.Tests
 {
     /// <summary>Test class for Operations.Add() method.</summary>
+    [TestFixture]
     public class AddTests
     {
         /// <summary>Tests Operations.Add() method with positive numbers.</summary>
