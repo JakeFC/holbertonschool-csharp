@@ -15,7 +15,7 @@ namespace Text
                 char c = s[i];
                 int lengthRemaining = s.Length - i - 1;
                 if (!(s.Substring(0, i).Contains(c.ToString())) &&
-                    (i == s.Length - 1 || !(s.Substring(i + 1, lengthRemaining).Contains(c.ToString()))))
+                    (lengthRemaining == 0 || !(s.Substring(i + 1, lengthRemaining).Contains(c.ToString()))))
                 {
                     return i;
                 }
