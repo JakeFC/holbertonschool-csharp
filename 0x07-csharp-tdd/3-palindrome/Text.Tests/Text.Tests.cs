@@ -3,6 +3,7 @@ using NUnit.Framework;
 namespace Text.Tests
 {
     /// <summary>Unittests for Str method functionality.</summary>
+    [TestFixture]
     public class StrTests
     {
         /// <summary>Tests Str.IsPalindrome() with a basic palindrome of lowercase letters.</summary>
