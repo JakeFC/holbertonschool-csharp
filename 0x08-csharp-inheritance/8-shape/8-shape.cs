@@ -53,7 +53,7 @@ class Rectangle : Shape
 ///<summary>Subclass of Rectangle with Size property.</summary>
 class Square : Rectangle
 {
-    ///<summary>Length of either side of a Square.</summary>
+    // Length of either side of a Square.
     private int size;
 
     ///<summary>Gets or sets the size of the Rectangle. If value is negative, throws an error.</summary>
