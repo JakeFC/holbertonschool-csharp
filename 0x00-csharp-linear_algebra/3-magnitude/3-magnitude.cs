@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Math;
 
 ///<summary>Defines vector functions.</summary>
 class VectorMath
@@ -9,7 +8,7 @@ class VectorMath
 	///<returns>The length of the vector, or -1.</returns>
 	public static double Magnitude(double[] vector)
 	{
-		double length;
+		double length = 0;
 		if (vector.Length < 2 || vector.Length > 3)
 		{
 			return -1;
