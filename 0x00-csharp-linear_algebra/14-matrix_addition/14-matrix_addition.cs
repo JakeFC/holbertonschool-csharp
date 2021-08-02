@@ -10,11 +10,11 @@ class MatrixMath
 	public static double[,] Add(double[,] matrix1, double[,] matrix2)
 	{
 		if (matrix1.Length != matrix2.Length || matrix1.Rank < 2 || matrix1.Rank > 3)
-			return new double[,]{{-1}, {-1}};
+			return new double[,]{{-1},};
 		for (int i = 0; i < matrix1.Rank; i++)
 		{
 			if (matrix1.GetLength(i) != matrix2.GetLength(i) || matrix1.GetLength(i) != matrix1.Rank)
-				return new double[,]{{-1}, {-1}};
+				return new double[,]{{-1},};
 			for (int j = 0; j < matrix1.GetLength(i); j++)
 			{
 				matrix1[i, j] += matrix2[i, j];
