@@ -11,7 +11,7 @@ class MatrixMath
 	{
 		int upper0 = matrix.GetUpperBound(0);
 		int upper1 = matrix.GetUpperBound(1);
-		if (upper0 < 2 || upper0 > 3 || upper0 != upper1)
+		if (upper0 < 1 || upper0 > 2 || upper0 != upper1)
 			return new double[,]{{-1},};
 		for (int i = 0; i <= matrix.GetUpperBound(0); i++)
 		{
