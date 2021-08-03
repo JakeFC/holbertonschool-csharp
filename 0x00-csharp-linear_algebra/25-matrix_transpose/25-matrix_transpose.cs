@@ -10,10 +10,10 @@ class MatrixMath
 	{
 		int limitY = matrix.GetUpperBound(0);
 		int limitX = matrix.GetUpperBound(1);
-		var result = new double[limitY + 1, limitX + 1];
-		for (int y = 0; y <= limitY; y++)
+		var result = new double[limitX + 1, limitY + 1];
+		for (int y = 0; y <= limitX; y++)
 		{
-			for (int x = 0; x<= limitX; x++)
+			for (int x = 0; x<= limitY; x++)
 				result[y, x] = matrix[x, y];
 		}
 		return result;
