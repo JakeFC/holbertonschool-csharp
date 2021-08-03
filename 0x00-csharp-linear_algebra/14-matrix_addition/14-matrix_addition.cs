@@ -11,11 +11,11 @@ class MatrixMath
 	{
 		if (matrix1.Length != matrix2.Length || matrix1.Rank < 2 || matrix1.Rank > 3)
 			return new double[,]{{-1},};
-		for (int i = 0; i < 2; i++)
+		if (matrix1.GetUpperBound(0) != matrix1.GetUpperBound(1))
+			return new double[,]{{-1},};
+		for (int i = 0; i <= matrix1.GetUpperBound(0); i++)
 		{
-			if (matrix1.GetLength(i) != matrix2.GetLength(i))
-				return new double[,]{{-1},};
-			for (int j = 0; j < matrix1.GetLength(i); j++)
+			for (int j = 0; j <= matrix2.GetUpperBound(1); j++)
 			{
 				matrix1[i, j] += matrix2[i, j];
 			}
