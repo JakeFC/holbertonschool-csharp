@@ -10,7 +10,7 @@ class MatrixMath
 	{
 		int limitY = matrix.GetUpperBound(0);
 		int limitX = matrix.GetUpperBound(1);
-		if (limitY < 1 || limitY > 2)
+		if (limitY < 1 || limitY > 2 || limitX != limitY)
 			return -1;
 		double result = 0;
 		if (limitY == 1)
