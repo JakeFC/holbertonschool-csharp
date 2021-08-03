@@ -11,9 +11,9 @@ class MatrixMath
 	{
 		if (matrix1.Length != matrix2.Length || matrix1.Rank < 2 || matrix1.Rank > 3)
 			return new double[,]{{-1},};
-		for (int i = 0; i < matrix1.Rank; i++)
+		for (int i = 0; i < 2; i++)
 		{
-			if (matrix1.GetLength(i) != matrix2.GetLength(i) || matrix1.GetLength(i) != matrix1.Rank)
+			if (matrix1.GetLength(i) != matrix2.GetLength(i))
 				return new double[,]{{-1},};
 			for (int j = 0; j < matrix1.GetLength(i); j++)
 			{
