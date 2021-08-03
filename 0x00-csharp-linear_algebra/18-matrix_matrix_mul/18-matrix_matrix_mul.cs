@@ -15,7 +15,7 @@ class MatrixMath
 		int mTwoX = matrix2.GetUpperBound(1);
 		if (mOneX != mTwoY)
 			return new double[,]{{-1},};
-		var result = new double[mOneY, mTwoX];
+		var result = new double[mOneY + 1, mTwoX + 1];
 		for (int y = 0; y <= mOneY; y++)
 		{
 			for (int x = 0; x <= mTwoX; x++)
@@ -25,7 +25,7 @@ class MatrixMath
 				{
 					total += matrix1[y, i] * matrix2[i, x];
 				}
-				result [y, x] = total;
+				result[y, x] = total;
 			}
 		}
 		return result;
