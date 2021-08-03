@@ -22,7 +22,7 @@ class MatrixMath
 				double total = 0;
 				for (int i = 0; i <= limitX; i++)
 				{
-					total += matrix[y, i] * rotation[i, x];
+					total += Math.Round(matrix[y, i] * rotation[i, x], 2);
 				}
 				result[y, x] = Math.Round(total, 2);
 			}
