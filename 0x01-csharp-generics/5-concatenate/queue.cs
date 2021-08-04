@@ -110,7 +110,7 @@ public class Queue<T>
 			return null;
 		}
 		if (!(typeof(T) == typeof(string)) && !(typeof(T) == typeof(char)))
-			return "Concatenate is for a queue of Strings or Chars only.";
+			return "Concatenate is for a queue of Strings or Chars only.\n";
 		string result = "";
 		string sep = "";
 		if (typeof(T) == typeof(string))
