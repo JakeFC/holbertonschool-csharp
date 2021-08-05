@@ -31,7 +31,7 @@ public interface IBreakable
 }
 
 ///<summary>Contract specifying collectability.</summary>
-public interface ICollectible
+public interface ICollectable
 {
 	///<summary>Collected status of object.</summary>
 	bool isCollected { get; set; }
@@ -40,8 +40,8 @@ public interface ICollectible
 	void Collect();
 }
 
-///<summary>Child class of Base implementing IInteractive, IBreakable, and ICollectible interfaces.</summary>
-public class TestObject : Base, IInteractive, IBreakable, ICollectible
+///<summary>Child class of Base implementing IInteractive, IBreakable, and ICollectable interfaces.</summary>
+public class TestObject : Base, IInteractive, IBreakable, ICollectable
 {
 	///<summary>Durability of object.</summary>
 	public int durability { get; set; }

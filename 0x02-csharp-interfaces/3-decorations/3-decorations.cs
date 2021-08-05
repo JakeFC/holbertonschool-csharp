@@ -31,7 +31,7 @@ public interface IBreakable
 }
 
 ///<summary>Contract specifying collectability.</summary>
-public interface ICollectible
+public interface ICollectable
 {
 	///<summary>Collected status of object.</summary>
 	bool isCollected { get; set; }
