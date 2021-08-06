@@ -22,7 +22,7 @@ public class Player
 			this.maxHp = 100f;
 			System.Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
 		}
-		this.hp = maxHp;
+		this.hp = this.maxHp;
 	}
 
 	///<summary>Prints the current health out of max health of the player.</summary>
