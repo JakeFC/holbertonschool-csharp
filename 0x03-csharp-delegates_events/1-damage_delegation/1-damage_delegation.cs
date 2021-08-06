@@ -31,6 +31,10 @@ public class Player
 		System.Console.WriteLine(String.Format("{0} has {1} / {2} health", this.name, this.hp, this.maxHp));
 	}
 
+	///<summary>Delegate for math calculations.</summary>
+	///<param name="f">Float input.</param>
+	public delegate void CalculateMath(float f);
+
 	///<summary>Prints a formatted string for Player taking damage.</summary>
 	///<param name="damage">Damage taken. If less than 0, set to 0.</param>
 	public void TakeDamage(float damage)
@@ -49,7 +53,3 @@ public class Player
 		System.Console.WriteLine(String.Format("{0} heals {1} HP!", this.name, heal));
 	}
 }
-
-///<summary>Delegate for math calculations.</summary>
-///<param name="f">Float input.</param>
-public delegate void CalculateMath(float f);
