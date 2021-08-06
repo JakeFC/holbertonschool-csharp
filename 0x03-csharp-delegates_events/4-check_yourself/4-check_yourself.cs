@@ -25,7 +25,7 @@ public class Player
 		}
 		this.hp = this.maxHp;
 		this.status = String.Format("{0} is ready to go", this.name);
-		HPCheck += CheckStatus;
+		HPCheck += CheckStatus; // adds CheckStatus method to event handler's list of actions
 	}
 
 	///<summary>Prints the current health out of max health of the player.</summary>
@@ -84,7 +84,7 @@ public class Player
 			return baseValue;
 	}
 
-	///<summary>Handles HP Checking events with CurrentHPArgs.</summary>
+	///<summary>Handles HP Checking events with CurrentHPArgs as argument.</summary>
 	public event EventHandler<CurrentHPArgs> HPCheck;
 
 	///<summary>Sets and prints the current status of the object, based on their current hp.</summary>
